@@ -1,0 +1,66 @@
+<script>
+  export let text = "";
+  export let light = false;
+  export let dark = false;
+  export let top = false;
+  export let bottom = false;
+  export let right = false;
+  export let left = false;
+</script>
+
+<div class="container">
+  <span class="slot"><slot /></span>
+  <div class="bubble" class:light class:dark class:left class:right class:bottom class:top>{text}</div>
+</div>
+
+<style>
+  .container {
+    position: relative;
+    display: inline-block;
+  }
+  .bubble {
+    display: inline-block;
+    position: absolute;
+    padding: 4px 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: .75rem;
+    color: inherit;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    visibility: hidden;
+    transition: visibility 200ms;
+  }
+  .bubble.light {
+    background: rgba(256,256,256,.8)
+  }
+  .bubble.dark {
+    background: rgba(0,0,0,.64);
+    color: #fff;
+  }
+  .bubble.top {
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%, 100%);
+  }
+  .bubble.bottom {
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    margin-bottom: -8px;
+  }
+  .bubble.right {
+    right: 0;
+    transform: translateX(100%);
+    margin-right: -8px;
+  }
+  .bubble.left {
+    left: 0;
+    transform: translateX(-100%);
+    margin-left: -8px;
+  }
+  .slot:hover + .bubble {
+    visibility: visible;
+  }
+</style>
