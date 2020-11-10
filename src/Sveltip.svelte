@@ -42,23 +42,24 @@
   .bubble.top {
     left: 50%;
     bottom: 100%;
-    transform: translate(-50%, 100%);
+    transform:translateX(-50%);
+    margin-bottom: 4px;
   }
   .bubble.bottom {
     left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 100%);
-    margin-bottom: -8px;
+    top: 100%;
+    transform:translateX(-50%);
+    margin-top: 4px;
   }
   .bubble.right {
     right: 0;
     transform: translateX(100%);
-    margin-right: -8px;
+    margin-right: -4px;
   }
   .bubble.left {
     left: 0;
     transform: translateX(-100%);
-    margin-left: -8px;
+    margin-left: -4px;
   }
   .slot:hover + .bubble {
     visibility: visible;
