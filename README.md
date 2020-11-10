@@ -17,7 +17,7 @@ First you need to import it on the script section
 // ...
 ```
 and then use it on your application. Here's some example code:
-```js
+```html
     <Sveltip top dark text="Click me to begin">
         <button>Start</button>
     </Sveltip>
