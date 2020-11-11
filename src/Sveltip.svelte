@@ -30,7 +30,7 @@
     backdrop-filter: saturate(180%) blur(20px);
     box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
     visibility: hidden;
-    transition: visibility 200ms;
+    
   }
   .bubble.light {
     background: rgba(256,256,256,.8)
@@ -63,5 +63,14 @@
   }
   .slot:hover + .bubble {
     visibility: visible;
+    animation: fadein .64s;
   }
+  @keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 </style>
