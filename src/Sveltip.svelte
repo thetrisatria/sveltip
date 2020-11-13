@@ -16,10 +16,10 @@
   <style>
     .container {
       position: relative;
-      display: inline-block;
+      display: block;
     }
     .bubble {
-      display: inline-block;
+      display: block;
       position: absolute;
       padding: 4px 12px;
       white-space: nowrap;
@@ -33,7 +33,7 @@
       
     }
     .bubble.light {
-      background: rgba(256,256,256,.8)
+      background: rgba(256,256,256,.72)
     }
     .bubble.dark {
       background: rgba(0,0,0,.64);
